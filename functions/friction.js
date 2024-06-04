@@ -10,6 +10,6 @@
  * console.log(`The friction force is ${friction}N`);
  */
 
-export function getFriction(reverseForce, activeForce) {
-  return reverseForce - activeForce;
+export function getFriction(activeForce, reverseForce) {
+  return activeForce - reverseForce;
 }

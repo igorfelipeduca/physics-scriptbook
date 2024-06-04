@@ -11,17 +11,17 @@
 // c) a máxima aceleração que se pode imprimir à
 // caixa.
 
-import { getKinecticIntensityForce } from "../functions/fk.js";
-import { getMaxAcceleration } from "../functions/maxAcceleration.js";
-import { getFriction } from "../functions/friction.js";
-import { getMass } from "../functions/mass.js";
-import { gravity } from "../constants/gravity.js";
+import { getMassa } from "../functions/massa.js";
+import { getForcaIntensidadeCinetica } from "../functions/fk.js";
+import { getTracao } from "../functions/tracao.js";
+import { getMaxAceleracao } from "../functions/aceleracao.js";
+import { gravidade } from "../constants/gravidade.js";
 import { normalizedLog } from "../utils/log-with-normalization.js";
 
-const normalForce = 200; // retirado do enunciado
-const mass = getMass(500, gravity); // peso da caixa e gravidade
-const kinecticForce = getKinecticIntensityForce(0.2, 500); // coeficiente e peso da caixa
-const friction = getFriction(normalForce, kinecticForce); // força normal e força cinética
-const maxAcceleration = getMaxAcceleration(friction, mass); // tração e massa
+const forcaNormal = 200; // retirado do enunciado
+const massa = getMassa(500, gravidade); // peso da caixa e gravidade
+const fk = getForcaIntensidadeCinetica(0.2, 500); // coeficiente e peso da caixa
+const tracao = getTracao(forcaNormal, fk); // força normal e força cinética
+const aceleracaoMax = getMaxAceleracao(tracao, massa); // tração e massa
 
-normalizedLog({ normalForce, mass, kinecticForce, friction, maxAcceleration });
+normalizedLog({ forcaNormal, massa, fk, tracao, aceleracaoMax });

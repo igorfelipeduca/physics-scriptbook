@@ -1,5 +1,5 @@
-// Usage: import { normalizedLog } from "./utils/log-with-normalization";
-// normalizedLog({ normalForce, mass, kinecticForce, friction, maxAcceleration });
+// Uso: import { logNormalizado } from "./utils/log-with-normalization";
+// logNormalizado({ forcaNormal, massa, forcaCinetica, atrito, aceleracaoMaxima });
 
 export function normalizedLog(obj) {
   const normalizedObj = {};

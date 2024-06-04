@@ -58,24 +58,24 @@ Para criar e resolver um novo problema, siga as instruções abaixo:
 
 ### Passo 1: Criar a Função
 
-Crie um arquivo chamado calculateFinalVelocity.js no diretório functions com o seguinte conteúdo:
+Crie um arquivo chamado velocidadeFinal.js no diretório functions com o seguinte conteúdo:
 
 ```javascript
-// calculateFinalVelocity.js
+// velocidadeFinal.js
 
 /**
- * Calculate the final velocity of an object in free fall from rest after a given time.
+ * Calcula a velocidade final de um objeto em queda livre a partir do repouso após um determinado tempo.
  *
- * @param {number} gravity - Acceleration due to gravity in m/s^2
- * @param {number} time - Time in seconds
- * @returns {number} - Final velocity in m/s
+ * @param {number} gravidade - Aceleração devido à gravidade em m/s^2
+ * @param {number} tempo - Tempo em segundos
+ * @returns {number} - Velocidade final em m/s
  *
- * Example:
- * const finalVelocity = calculateFinalVelocity(9.81, 5);
- * console.log(`The final velocity is ${finalVelocity} m/s after 5 seconds.`);
+ * Exemplo:
+ * const velocidadeFinal = getVelocidadeFinal(9.81, 5);
+ * console.log(`A velocidade final é ${velocidadeFinal} m/s após 5 segundos.`);
  */
-export function calculateFinalVelocity(gravity, time) {
-  return gravity * time;
+export function getVelocidadeFinal(gravidade, tempo) {
+  return gravidade * tempo;
 }
 ```
 
@@ -86,15 +86,14 @@ Crie um arquivo chamado problem2.js no diretório problems com o seguinte conte�
 ```javascript
 // problem2.js
 
-const calculateFinalVelocity = require("../functions/calculateFinalVelocity");
+import { getVelocidadeFinal } from "../functions/calculateFinalVelocity.js";
+import { gravidade } from "../constants/gravidade.js";
+import { normalizedLog } from "../utils/log-with-normalization.js";
 
-const gravity = 9.81; // Acceleration due to gravity in m/s^2
-const time = 5; // Time in seconds
+const tempo = 10; // em segundos
+const velFinal = getVelocidadeFinal(gravidade, 10);
 
-const finalVelocity = calculateFinalVelocity(gravity, time);
-console.log(
-  `The final velocity of the object is ${finalVelocity} m/s after ${time} seconds.`
-);
+normalizedLog({ velFinal, tempo });
 ```
 
 ## Contribuindo

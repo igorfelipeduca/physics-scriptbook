@@ -40,7 +40,7 @@ Para executar um problema da lista de problemas, utilize o script run problem:
 1. Execute o seguinte comando:
 
 ```bash
-node run problem {problem_name}
+npm run problem {problem_name}
 ```
 
 Substitua <problem_name> pelo nome do arquivo do problema que você deseja resolver (por exemplo, problem1).

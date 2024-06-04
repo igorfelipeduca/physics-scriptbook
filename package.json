@@ -1,0 +1,15 @@
+{
+  "name": "dynamic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "playground.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pg": "node playground.js",
+    "problem": "node utils/run-problem.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

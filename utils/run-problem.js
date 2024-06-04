@@ -1,3 +1,8 @@
+// Run a problem by providing the problem number as an argument.
+// Example:
+// npm run problem 01
+// This will run the file problems/01.js
+
 import { exec } from "child_process";
 
 const problemNumber = process.argv[2];

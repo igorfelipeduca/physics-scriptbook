@@ -13,7 +13,7 @@
 
 import { getKinecticIntensityForce } from "../functions/fk.js";
 import { getMaxAcceleration } from "../functions/maxAcceleration.js";
-import { getTraction } from "../functions/traction.js";
+import { getFriction } from "../functions/friction.js";
 import { getMass } from "../functions/mass.js";
 import { gravity } from "../constants/gravity.js";
 import { normalizedLog } from "../utils/log-with-normalization.js";
@@ -21,7 +21,7 @@ import { normalizedLog } from "../utils/log-with-normalization.js";
 const normalForce = 200; // retirado do enunciado
 const mass = getMass(500, gravity); // peso da caixa e gravidade
 const kinecticForce = getKinecticIntensityForce(0.2, 500); // coeficiente e peso da caixa
-const traction = getTraction(normalForce, kinecticForce); // força normal e força cinética
-const maxAcceleration = getMaxAcceleration(traction, mass); // tração e massa
+const friction = getFriction(normalForce, kinecticForce); // força normal e força cinética
+const maxAcceleration = getMaxAcceleration(friction, mass); // tração e massa
 
-normalizedLog({ normalForce, mass, kinecticForce, traction, maxAcceleration });
+normalizedLog({ normalForce, mass, kinecticForce, friction, maxAcceleration });

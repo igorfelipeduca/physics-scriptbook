@@ -1,9 +1,14 @@
-// função usada para descobrir a aceleração máxima de um objeto
-// criada a partir da segunda lei de Newton: Fr = m * a
-// exemplo de uso:
-// activeForce: força normal aplicada sobre o objeto
-// reverseForce: força com sentido inverso à força normal aplicada sobre o objeto
-// exemplo: getMaxAcceleration(força normal aplicada ao objeto, massa do objeto)
+/**
+ * Calculate the max acceleration of an object.
+ *
+ * @param {number} activeForce - Active force exerted on the object. The force must be in Newtons (N)
+ * @param {number} reverseForce - Reverse force exerted on the object. The force must be in Newtons (N)
+ * @returns {number} - Acceleration in m/s^2
+ *
+ * Example:
+ * const acceleration = getMaxAcceleration(500, 100);
+ * console.log(`The max acceleration is ${acceleration}m/s^2`);
+ */
 
 export function getMaxAcceleration(activeForce, reverseForce) {
   return activeForce / reverseForce;

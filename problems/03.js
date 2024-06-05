@@ -5,9 +5,9 @@ uma força de 50N sobre a caixa.
 Seu treinador, Jorge, marca que Ana conseguiu
 empurrar a caixa por 12m em um intervalo de 30s.
 Sabendo dos dados acima, calcule o seguinte:
-a) a massa da bola;
-b) a aceleração da bola;
-c) a velocidade média da bola.
+a) a massa da caixa;
+b) a aceleração da caixa;
+c) a velocidade média da caixa.
 */
 
 import { getMassa } from '../functions/massa.js';

@@ -2,7 +2,7 @@
  * Calcula a massa de um objeto.
  *
  * @param {number} peso - Peso do objeto. A força deve estar em Newtons (N)
- * @param {number} gravidade - Força da gravidade. A força deve estar em Newtons (N)
+ * @param {number} gravidade - Força da gravidade. A gravidade deve estar em m/s^2
  * @returns {number} - Massa em quilogramas (kg)
  *
  * Exemplo:

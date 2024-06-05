@@ -14,7 +14,7 @@
 import { getMassa } from "../functions/massa.js";
 import { getForcaIntensidadeCinetica } from "../functions/fk.js";
 import { getTracao } from "../functions/tracao.js";
-import { getMaxAceleracao } from "../functions/aceleracao.js";
+import { getMaxAceleracao } from "../functions/aceleracaoMaxima.js";
 import { gravidade } from "../constants/gravidade.js";
 import { normalizedLog } from "../utils/log-with-normalization.js";
 
